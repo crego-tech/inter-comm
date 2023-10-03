@@ -37,7 +37,7 @@ def get_host(service_name):
     return root_host
 
 
-def filter_queryset(queryset, auth_data, is_root):
+def filter_queryset_by_auth(queryset, auth_data, is_root):
     if auth_data.get("lead_id"):
         if is_root:
             queryset = queryset.filter(lead_id=auth_data["lead_id"])
