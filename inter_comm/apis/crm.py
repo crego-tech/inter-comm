@@ -24,3 +24,8 @@ class CRMAPIs:
             timeout=20,
         )
         return handle_response(url, "PUT", {"lead_id": lead_id, "data": data}, headers, response, self.app_name)
+
+    def update_bulk_lead_details(self, data):
+        url = f"{self.root_host}/v1/{self.app_name}/leads/bulk_update/"
+        response = requests.patch(url=url, json=data, timeout=20)
+        return handle_response(url, "PUT", data, {}, response, self.app_name)
