@@ -16,6 +16,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[packages]
+inter_comm = { git = "https://github.com/crego-tech/inter-comm.git", branch = "master" }
+
 
 [tool.black]
 line-length = 120
